@@ -4,6 +4,15 @@ programa {
     maioridade ou nao.
     */
 	funcao inicio() {
+		inteiro idade = 0
 		
+		escreva("Informe sua idade: ")
+		leia(idade)
+		
+		se (idade >= 18) {
+		    escreva("Voce ja e maior de idade!\n")
+		} senao {
+		    escreva("Voce e menor de idade!\n")
+		}
 	}
 }

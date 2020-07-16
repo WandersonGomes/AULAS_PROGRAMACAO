@@ -9,6 +9,54 @@ programa {
     Maiores de 50   3           2                           1
     */
 	funcao inicio() {
+		inteiro idade = 0, grupo_risco = 0
+		real peso = 0.00
+
+		escreva("Informe a idade da pessoa: ")
+		leia(idade)
+		escreva("Informe o peso da pessoa: ")
+		leia(peso)
 		
+		
+		//IDADE ATE 20 ANOS
+		se (idade < 20) {
+		    se (peso <= 60.00) {
+		        grupo_risco = 9
+		    }
+		    se (peso > 60.00 e peso <= 90.00) {
+		        grupo_risco = 8
+		    }
+		    se (peso > 90) {
+		        grupo_risco = 7
+		    }
+		}
+		
+		//IDADE ENTRE 20 ATE 50
+		se (idade >= 20 e idade <= 50) {
+		    se (peso <= 60.00) {
+		        grupo_risco = 6
+		    }
+		    se (peso > 60.00 e peso <= 90.00) {
+		        grupo_risco = 5
+		    }
+		    se (peso > 90) {
+		        grupo_risco = 4
+		    }
+		}
+		
+		//IDADE MAIOR QUE 50
+		se (idade > 50) {
+		    se (peso <= 60.00) {
+		        grupo_risco = 3
+		    }
+		    se (peso > 60.00 e peso <= 90.00) {
+		        grupo_risco = 2
+		    }
+		    se (peso > 90) {
+		        grupo_risco = 1
+		    }
+		}
+		
+		escreva("O grupo de risco que essa pessoa esta e: ", grupo_risco, "\n")
 	}
 }

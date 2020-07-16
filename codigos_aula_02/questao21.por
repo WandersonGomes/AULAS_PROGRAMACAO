@@ -12,7 +12,46 @@ programa {
     10 a 20                     Centro-Oeste
     21 a 30                     Nordeste
     */
+    inclua biblioteca Matematica --> mat
 	funcao inicio() {
-		
+	    real preco_produto = 0.00
+	    inteiro codigo = 0
+	    cadeia procedencia = "a"
+	    
+	    escreva("Informe o preco do produto: ")
+	    leia(preco_produto)
+	    escreva("Informe o codigo do produto (1 ate 30): ")
+	    leia(codigo)
+	    
+	    se (codigo > 0 e codigo < 31) {
+    	    se (codigo == 1) {
+    	        procedencia = "Sul"
+    	    }
+    	    se (codigo == 2) {
+    	        procedencia = "Norte"
+    	    }
+    	    se (codigo == 3) {
+    	        procedencia = "Leste"
+    	    }
+    	    se (codigo == 4) {
+    	        procedencia = "Oeste"
+    	    }
+    	    se (codigo == 5 ou codigo == 6) {
+    	        procedencia = "Nordeste"
+    	    }
+    	    se (codigo == 7 ou codigo == 8 ou codigo == 9) {
+    	        procedencia = "Sudeste"
+    	    }
+    	    se (codigo >= 10 e codigo <= 20) {
+    	        procedencia = "Centro-Oeste"
+    	    }
+    	    se (codigo >= 21 e codigo <= 30) {
+    	        procedencia = "Nordeste"
+    	    }
+	    } senao {
+	        procedencia = "Desconhecida"
+	    }
+	    
+	    escreva("O produto e da regiao: ", procedencia, "\n")
 	}
 }

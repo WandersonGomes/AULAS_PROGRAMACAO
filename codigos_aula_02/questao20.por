@@ -11,6 +11,29 @@ programa {
     Senior                      Acima de 30
     */
 	funcao inicio() {
+		inteiro idade_nadador = 0
 		
+		escreva("Informe a idade do nadador: ")
+		leia(idade_nadador)
+		
+		se (idade_nadador >= 5 e idade_nadador <= 7) {
+		    escreva("Categoria: Infantil\n")
+		}
+		
+		se (idade_nadador >= 8 e idade_nadador <= 10) {
+		    escreva("Categoria: Juvenil\n")
+		}
+		
+		se (idade_nadador >= 11 e idade_nadador <= 15) {
+		    escreva("Categoria: Adolescente\n")
+		}
+		
+		se (idade_nadador >= 16 e idade_nadador <= 30) {
+		    escreva("Categoria: Adulto\n")
+		}
+		
+		se (idade_nadador > 30) {
+		    escreva("Categoria: Senior\n")
+		}
 	}
 }
